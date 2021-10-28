@@ -1,0 +1,26 @@
+<template>
+	<lightning-card title={header}>
+		<div class="body">
+      <template if:true={accounts}>
+				<template for:each={accounts} for:item="account">
+						<lightning-layout key={account.Id} >
+							<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+								<a name={account.Id} onclick={navigateToRecord}>{account.Name}</a>
+							</lightning-layout-item>
+							<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+              	<p>{account.NumberOfEmployees}</p>
+            </lightning-layout-item>
+					</lightning-layout>
+          </template>
+      </template>
+		</div>
+		<p slot="footer">
+			<lightning-button
+				class={buttonClass}
+				variant="brand"
+				label="Get Account"
+				onclick={handleClick}
+			></lightning-button>
+		</p>
+	</lightning-card>
+</template>

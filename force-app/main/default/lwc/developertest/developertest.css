@@ -1,0 +1,12 @@
+lightning-button.LARGE {
+  --sds-c-button-brand-color-background: blue;
+}
+lightning-button.MEDIUM {
+  --sds-c-button-brand-color-background: green;
+}
+lightning-button.SMALL {
+  --sds-c-button-brand-color-background: yellow;
+}
+lightning-button.COMMUNITY {
+  --sds-c-button-brand-color-background: red;
+}
